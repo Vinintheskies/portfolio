@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Moraes Developer Jr.</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/94c400df67.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="titulos">
+            <h1 class="site-title">Vinicius Moraes</h1>
+            <p>Desenvolvedor Web/JS Jr.</p>
+            <p>JavaScript - HTML - CSS</p>
+        </div>
+
+    </header>
+
+    </section>
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+
+        <div class="grid icons">
+            <a target="_blank" href="https://github.com/Vinintheskies/viniciusdeveloper.git">
+                <i class="fab fa-github"></i>
+
+            </a>
+            <a target="_blank" href="https://twitter.com/vinimoraes___">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/viniciuslealmoraes">
+                <i class="fab fa-linkedin"></i>
+
+                <a target="_blank" href="mailto:moraeslealvinicius@gmail.com">
+                    <i class="far fa-envelope-open"></i>
+
+                </a>
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i)
+            });
+        }
+        const titulo = document.querySelector('h1');
+        typeWriter(titulo);
+
+        typerWriter(document.querySelector('p'));
+    </script>
+
+</body>
+
+</html>

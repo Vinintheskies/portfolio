@@ -1,0 +1,208 @@
+/* soft reset do css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: royalblue;
+    background-size: auto 100vh;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    height: 100vh;
+    font-size: 12px;
+}
+
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/* breakpoint */
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+/* breakpoint */
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: royalblue;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1;
+}
+
+.menu a:active,
+.menu a:hover {
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.5em;
+}
+
+a {
+    color: whitesmoke;
+    background-color: royalblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.site-subtitle,
+.about,
+.site-title {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1em;
+}
+
+.site-title {
+    font-size: 2em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.site-subtitle {
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    line-height: 1.8em;
+}
+
+.contato,
+.curriculum, 
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+.contato,
+.curriculum, 
+.portfolio h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+    font-size: 2em;
+    color: whitesmoke;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 260px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 8em - 48px);
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    object-fit: cover;
+    /* Ajuste para as imagens */
+    object-position: left bottom;
+    transition: transform 500ms;
+    position: relative;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2);
+}
+
+.text {
+    text-align: center;
+    justify-content: center;
+    color: whitesmoke;
+    padding: 30px;
+    margin-top: 0;
+    box-sizing: content-box;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 2em;
+    transition: text-shadow 1s;
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    /*text-shadow: 10px 10px 10px black;
+    */
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
+}

@@ -126,12 +126,14 @@ h1::after {
 }
 
 .contato,
+.curriculum, 
 .portfolio {
     padding: 2em;
     height: 100vh;
 }
 
 .contato,
+.curriculum, 
 .portfolio h2 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: whitesmoke;
